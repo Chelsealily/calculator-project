@@ -5,3 +5,15 @@ body {
     padding:0;
     background-color: $color-linen;
 }
+
+.calculator {
+    height: 100vh;
+    
+&__grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(5, 100px);
+}
+}
