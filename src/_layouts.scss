@@ -1,19 +1,42 @@
 @use "./variables" as *;
 
 body {
-    margin:0;
-    padding:0;
+    margin: 30px 30px;
+    padding:30px;
     background-color: $color-linen;
 }
 
 .calculator {
-    height: 100vh;
-    
+            
 &__grid{
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(4,100px);
     grid-template-rows: repeat(5, 100px);
+    gap: 5px;
+
 }
+
+&__bigbutton {
+    grid-column: span 2;
+    padding: 30px;
+}  
+    
 }
+
+
+button {
+    border: 3px solid $color-black;
+    border-radius: 90%;
+    font-size: 30px;
+    padding: 30px 30px;
+    background-color: $color-white;
+    
+}
+
+button:hover {
+    background-color: $color-blue;
+  }
+
+
