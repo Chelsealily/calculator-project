@@ -7,11 +7,11 @@
     box-sizing: border-box;
 }
 
-
+//Tablet media query 
 @media screen and (min-width: 768px) {
 
 .calculator {
-    width: 35vw;
+    width: 32vw;
 
 &__grid{
     justify-content: flex-start;
@@ -19,6 +19,22 @@
     padding-left: 10px;
 
 }    
+
+}
+}
+
+//Laptop media query 
+
+@media screen and (min-width: 1000px) {
+    .calculator {
+        width: 25vw;
+    
+    &__grid{
+        justify-content: flex-start;
+        align-items: flex-start;    
+        padding-left: 10px;
+    
+    }    
 
 }
 }

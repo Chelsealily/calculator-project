@@ -1,5 +1,7 @@
 @use "./variables" as *;
 
+//Mobile optimized - see main.scss for mediaquerys
+
 body {
     margin: 30px 10px;
     background-color: $color-l-blue;
@@ -15,7 +17,7 @@ body {
 &__window {
     background-color: $color-white;
     border-radius: 5%;
-    height: 100px;
+    height: 70px;
     border: 3px solid $color-gray;
     font-size: 40px;
         
@@ -25,8 +27,8 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(4,40px);
-    grid-template-rows: repeat(5, 40px);
+    grid-template-columns: repeat(4,35px);
+    grid-template-rows: repeat(5, 35px);
     gap: 5px;
     padding-top: 20px;
     width: 40vw;

@@ -14,7 +14,7 @@ body {
 .calculator__window {
   background-color: rgb(244, 244, 244);
   border-radius: 5%;
-  height: 100px;
+  height: 70px;
   border: 3px solid rgb(94, 94, 94);
   font-size: 40px;
 }
@@ -22,8 +22,8 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(4, 40px);
-  grid-template-rows: repeat(5, 40px);
+  grid-template-columns: repeat(4, 35px);
+  grid-template-rows: repeat(5, 35px);
   gap: 5px;
   padding-top: 20px;
   width: 40vw;
@@ -32,7 +32,7 @@ body {
 button {
   border: 3px solid rgb(94, 94, 94);
   border-radius: 90%;
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px 10px;
   background-color: rgb(244, 244, 244);
   color: cadetblue;
@@ -57,7 +57,17 @@ button:hover {
 
 @media screen and (min-width: 768px) {
   .calculator {
-    width: 35vw;
+    width: 32vw;
+  }
+  .calculator__grid {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .calculator {
+    width: 25vw;
   }
   .calculator__grid {
     justify-content: flex-start;
