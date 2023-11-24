@@ -29,15 +29,6 @@ body {
   width: 40vw;
 }
 
-.button__operator--c {
-  background-color: rgb(221, 191, 187);
-}
-
-.button__operator--equals {
-  grid-column: span 2;
-  padding: 8px;
-}
-
 button {
   border: 3px solid rgb(94, 94, 94);
   border-radius: 90%;
@@ -51,7 +42,7 @@ button:hover {
   background-color: rgb(244, 221, 179);
 }
 
-.button__operator--c {
+.button__operator--clear {
   background-color: rgb(221, 191, 187);
 }
 
@@ -62,4 +53,15 @@ button:hover {
 
 * {
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .calculator {
+    width: 35vw;
+  }
+  .calculator__grid {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
