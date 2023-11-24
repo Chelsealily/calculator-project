@@ -11,5 +11,17 @@ button {
 }
 
 button:hover {
-    background-color: $color-l-salmon;
+    background-color: $color-peach;
   }
+
+
+  .button__operator--c {
+    background-color: $color-l-salmon;
+    
+}
+
+.button__operator--equals {
+    grid-column: span 2;
+    padding: 8px;
+}  
+

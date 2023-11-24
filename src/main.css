@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 body {
   margin: 30px 10px;
-  background-color: linen;
+  background-color: rgb(200, 214, 214);
 }
 
 .calculator {
@@ -16,6 +16,7 @@ body {
   border-radius: 5%;
   height: 100px;
   border: 3px solid rgb(94, 94, 94);
+  font-size: 40px;
 }
 .calculator__grid {
   display: grid;
@@ -27,9 +28,14 @@ body {
   padding-top: 20px;
   width: 40vw;
 }
-.calculator__bigbutton {
+
+.button__operator--c {
+  background-color: rgb(221, 191, 187);
+}
+
+.button__operator--equals {
   grid-column: span 2;
-  padding: 10px;
+  padding: 8px;
 }
 
 button {
@@ -42,7 +48,16 @@ button {
 }
 
 button:hover {
+  background-color: rgb(244, 221, 179);
+}
+
+.button__operator--c {
   background-color: rgb(221, 191, 187);
+}
+
+.button__operator--equals {
+  grid-column: span 2;
+  padding: 8px;
 }
 
 * {
