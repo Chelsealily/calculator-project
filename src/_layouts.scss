@@ -5,13 +5,14 @@
 body {
     margin: 30px 10px;
     background-color: $color-l-blue;
+    padding-left: 30px;
 }
 
 .calculator {
     border: 20px groove $color-l-salmon; 
     border-radius: 15%;
-    padding:20px 15px;
-    width: 55vw;
+    padding:30px 15px;
+    width: 65vw;
     background-color: $color-yellow;   
 
 &__window {
@@ -32,11 +33,11 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(4,35px);
-    grid-template-rows: repeat(5, 35px);
+    grid-template-columns: repeat(4,50px);
+    grid-template-rows: repeat(5, 50px);
     gap: 5px;
     padding-top: 20px;
-    width: 40vw;
+    width: 50vw;
 
 }
 
