@@ -23,4 +23,7 @@ chooseOperation(operation) {
 
 }
 
-computed()
+compute() {
+
+}
+
