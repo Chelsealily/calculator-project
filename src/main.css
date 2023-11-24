@@ -5,7 +5,7 @@ body {
 }
 
 .calculator {
-  border: 20px solid rgb(221, 191, 187);
+  border: 20px groove rgb(221, 191, 187);
   border-radius: 15%;
   padding: 20px 15px;
   width: 55vw;
@@ -17,6 +17,10 @@ body {
   height: 70px;
   border: 3px solid rgb(94, 94, 94);
   font-size: 40px;
+  color: rgb(94, 94, 94);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 .calculator__grid {
   display: grid;
