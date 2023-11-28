@@ -1,42 +1,49 @@
-const numberButton = document.querySelectorAll<HTMLElement>(".buttons__number")
-const operationButton = document.querySelectorAll<HTMLElement>(".buttons__operator")
-const inputWindow = document.querySelector<HTMLElement>(".calculator__window")
-const equalsButton = document.querySelector(".buttons__operator--clear")
-const clearButton = document.querySelector<HTMLElement>(".buttons__operator--clear")
 
-if (!inputWindow || !equalsButton || !clearButton) {
-    throw new Error(`issue with a query selector`);
+// define buttons 
+
+const numberButtons = document.querySelectorAll(".buttons__number");
+const operatorButtons = document.querySelectorAll(".buttons__operator");
+const clearButton = document.querySelector<HTMLElement>(".buttons__operator--clear");
+const equalsButton = document.querySelector<HTMLElement>(".buttons__operator--equals");
+const display = document.querySelector<HTMLElement>(".calculator__window");
+
+if (!clearButton || !equalsButton || !display) {
+    throw new Error("issue with a query selector");
   }
 
-//check linked  
-console.log(operationButton)
-
-// Defaults for before using the calc
-let inputNum = ' ';
-let haveDot = false;
-let result = null;
+//defaults
+let firstInput = "";
+let secondInput = "";
+let operator = "";
 
 
-// event listener for showing number buttons and dot on click
+// handle number input 
 
-numberButton.forEach(number => {
-    number.addEventListener("click", (event: Event) => {
-        if (event.target.innerText === '.' && !haveDot) {
-            haveDot = true;
-        } else if (event.target.innerText === '.' && haveDot)
-        return;
+const handleNumberClick = (event: Event) => {
+    const clickedNumber = event.target.innerText;
+    if (operator === "") {
+      firstInput += clickedNumber;
+      display.innerText = firstInput;
+    } else {
+      secondInput += clickedNumber;
+      display.innerText = secondInput;
+    }
+  };
 
-    
-    inputNum += event.target.innerText;
-    inputWindow.innerText = inputNum;
-});
-});
+  numberButtons.forEach((button) => {
+    button.addEventListener("click", handleNumberClick);
+  });
+  
 
-// event listener for operations - go back to this
+// handle allclear click
+const handleClearClick = (event: Event) => {
+    firstInput = "";
+    secondInput = "";
+    operator = "";
+    display.innerText = "0";
+  };
+
+  clearButton.addEventListener("click", handleClearClick);
 
 
-
-
-
-
-
+  
