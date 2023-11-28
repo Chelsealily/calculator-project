@@ -3,9 +3,8 @@
 const numberButtons = document.querySelectorAll(".buttons__number");
 const operatorButtons = document.querySelectorAll(".buttons__operator");
 const clearButton = document.querySelector<HTMLElement>(".buttons__clear");
-const equalsButton = document.querySelector<HTMLElement>(".buttons__operator--equals");
+const equalsButton = document.querySelector<HTMLElement>(".buttons__equals");
 const display = document.querySelector<HTMLElement>(".calculator__window");
-const negButton = document.querySelector<HTMLElement>(".buttons__operator--neg");
 
 
 if (!clearButton || !equalsButton || !display) {
@@ -16,6 +15,7 @@ if (!clearButton || !equalsButton || !display) {
 let firstInput= " ";
 let secondInput= " ";
 let operator= " ";
+let haveDot = false;
 
 
 // handle number buttons click
@@ -59,26 +59,25 @@ const handleOperationClick = (event: Event) => {
   });
   
 
-// handle equals and do the maths! (+,/,*,-) - RECHECK AS NOT WORKING WELL
-
+// handle equals and do the maths! (+,/,*,-) 
 const handleEqualsClick = (event: Event) => {
     let result;
     switch (operator) {
       case "+":
         result = parseFloat(firstInput) + parseFloat(secondInput);
-        result = parseFloat(result.toFixed(6));
+        result = parseFloat(result.toFixed(5));
         break;
       case "-":
         result = parseFloat(firstInput) - parseFloat(secondInput);
-        result = parseFloat(result.toFixed(6));
+        result = parseFloat(result.toFixed(5));
         break;
       case "x":
         result = parseFloat(firstInput) * parseFloat(secondInput);
-        result = parseFloat(result.toFixed(6));
+        result = parseFloat(result.toFixed(5));
         break;
       case "÷":
         result = parseFloat(firstInput) / parseFloat(secondInput);
-        result = parseFloat(result.toFixed(6));
+        result = parseFloat(result.toFixed(5));
         break;
     }
     display.innerText = result;
@@ -92,10 +91,11 @@ const handleEqualsClick = (event: Event) => {
 
 
 
-// possibly add a clear -1 item button?
-
-// add an easter egg if i can?
-
 // handle decimal point (limit it to 1 use)
 
 // handle 0 (limit it to 1 use)
+
+
+// possibly add a clear -1 item button?
+
+// add an easter egg if i can?

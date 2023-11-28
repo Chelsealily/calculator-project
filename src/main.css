@@ -51,7 +51,7 @@ button:hover {
   background-color: rgb(221, 191, 187);
 }
 
-.buttons__operator--equals {
+.buttons__equals {
   grid-column: span 2;
   padding: 8px;
 }
