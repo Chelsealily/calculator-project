@@ -7,21 +7,21 @@ button {
     padding: 10px 10px;
     background-color: $color-white;
     color:$color-blue;
-    
-}
 
+}
+    
 button:hover {
     background-color: $color-peach;
   }
 
-
-  .button__operator--clear {
+.buttons__operator--clear {
     background-color: $color-l-salmon;
     
 }
 
-.button__operator--equals {
+.buttons__operator--equals {
     grid-column: span 2;
     padding: 8px;
 }  
+
 
