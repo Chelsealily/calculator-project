@@ -2,7 +2,7 @@
 
 const numberButtons = document.querySelectorAll(".buttons__number");
 const operatorButtons = document.querySelectorAll(".buttons__operator");
-const clearButton = document.querySelector<HTMLElement>(".buttons__operator--clear");
+const clearButton = document.querySelector<HTMLElement>(".buttons__clear");
 const equalsButton = document.querySelector<HTMLElement>(".buttons__operator--equals");
 const display = document.querySelector<HTMLElement>(".calculator__window");
 const negButton = document.querySelector<HTMLElement>(".buttons__operator--neg");
@@ -36,12 +36,12 @@ const handleNumberClick = (event: Event) => {
   });
   
 
-// handle allclear click - RECHECK AS NOT WORKING WELL
+// handle allclear click 
 const handleAcClick = (event: Event) => {
-    firstInput= " ";
-    secondInput= " ";
-    operator= " ";
-    display.innerText="0"
+    firstInput= "";
+    secondInput= "";
+    operator= "";
+    display.innerText=""
   };
 
   clearButton.addEventListener("click", handleAcClick);
