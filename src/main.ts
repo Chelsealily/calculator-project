@@ -6,7 +6,6 @@ const clearButton = document.querySelector<HTMLElement>(".buttons__clear");
 const equalsButton = document.querySelector<HTMLElement>(".buttons__equals");
 const display = document.querySelector<HTMLElement>(".calculator__window");
 
-
 if (!clearButton || !equalsButton || !display) {
     throw new Error("issue with a query selector");
   }
@@ -14,7 +13,7 @@ if (!clearButton || !equalsButton || !display) {
 //defaults
 let firstInput= " ";
 let secondInput= " ";
-let operator= " ";
+let operator= null;
 let haveDot = false;
 
 
@@ -31,17 +30,17 @@ const handleNumberClick = (event: Event) => {
     }
   };
 
-  numberButtons.forEach((button) => {
+numberButtons.forEach((button) => {
     button.addEventListener("click", handleNumberClick);
   });
-  
+
 
 // handle allclear click 
 const handleAcClick = (event: Event) => {
     firstInput= "";
     secondInput= "";
     operator= "";
-    display.innerText=""
+    display.innerText="0"
   };
 
   clearButton.addEventListener("click", handleAcClick);
@@ -79,6 +78,9 @@ const handleEqualsClick = (event: Event) => {
         result = parseFloat(firstInput) / parseFloat(secondInput);
         result = parseFloat(result.toFixed(5));
         break;
+    default:
+        console.log('Invalid operator');
+        break;
     }
     display.innerText = result;
     firstInput = result;
@@ -95,7 +97,6 @@ const handleEqualsClick = (event: Event) => {
 
 // handle 0 (limit it to 1 use)
 
-
-// possibly add a clear -1 item button?
+// handle = to 1 use limit
 
 // add an easter egg if i can?
