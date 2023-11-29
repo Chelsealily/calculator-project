@@ -90,14 +90,24 @@ const handleEqualsClick = () => {
     display.innerText = String(result!);
     firstInput = String(result!);
     secondInput = " ";
-    operator = " ";
+    operator = " ";  
+
+
+// Easter Egg
+    if (result == "Infinity") {
+      display.innerText = " ⭐Infinity⭐ "; 
+        } else if (display.innerText == "69") {
+            display.innerText = " noice 😉"; 
+       } else if (display.innerText == "22") {
+      display.innerHTML = '<img src="src/22ducks.gif" alt="2 sitting ducks">'; 
+}
+    
   };
 
 equalsButton.addEventListener("click", handleEqualsClick);
-
 
 // handle 0 (limit it to 1 use)
 
 // handle = to 1 use limit
 
-// add an easter egg if i can?
+   
