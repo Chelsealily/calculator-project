@@ -64,7 +64,7 @@ operatorButtons.forEach(button => {
 
 // handle equals and do the maths! (+,/,*,-)
 const handleEqualsClick = () => {
-    let result:number;
+    let result;
     switch (operator) {
       case "+":
         result = parseFloat(firstInput) + parseFloat(secondInput);
@@ -94,7 +94,7 @@ const handleEqualsClick = () => {
 
 
 // Easter Egg
-    if (result == "Infinity") {
+    if (display.innerText == "Infinity") {
       display.innerText = " ⭐Infinity⭐ "; 
         } else if (display.innerText == "69") {
             display.innerText = " noice 😉"; 
