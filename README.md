@@ -1,6 +1,8 @@
  <h1 style="font-size:10vw"> #calculator-project</h1>
 
-This project is a calculator web app built using HTML, SCSS, and JavaScript/TypeScript. The goal of the project is to create a web application that accepts user inputs, performs calculations, and displays the results based on the inputs provided through the calculator buttons.
+This project is a calculator web app built using HTML, SCSS, and JavaScript/TypeScript. The goal of the project is to create a web application that accepts user inputs, performs calculations, and displays the results based on the inputs provided through the calculator buttons. 
+
+This was my first ever project using JavaScript/TypeScript. I created a calculator with basic functionalities + 3 easter eggs on values Infinity, 22 and 69.
 
  <h2 style="font-size:5vw"> <b> The following requirements were set for this project:</b></h2>
 
