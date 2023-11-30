@@ -2,13 +2,14 @@
 body {
   margin: 30px 10px;
   background-color: rgb(200, 214, 214);
+  padding-left: 30px;
 }
 
 .calculator {
   border: 20px groove rgb(221, 191, 187);
   border-radius: 15%;
-  padding: 20px 15px;
-  width: 55vw;
+  padding: 30px 15px;
+  width: 65vw;
   background-color: rgb(247, 235, 216);
 }
 .calculator__window {
@@ -26,18 +27,18 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(4, 35px);
-  grid-template-rows: repeat(5, 35px);
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(5, 50px);
   gap: 5px;
   padding-top: 20px;
-  width: 40vw;
+  width: 50vw;
 }
 
 button {
   border: 3px solid rgb(94, 94, 94);
   border-radius: 90%;
   font-size: 18px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background-color: rgb(244, 244, 244);
   color: cadetblue;
 }
@@ -46,11 +47,11 @@ button:hover {
   background-color: rgb(244, 221, 179);
 }
 
-.button__operator--clear {
+.buttons__clear {
   background-color: rgb(221, 191, 187);
 }
 
-.button__operator--equals {
+.buttons__equals {
   grid-column: span 2;
   padding: 8px;
 }
@@ -61,21 +62,39 @@ button:hover {
 
 @media screen and (min-width: 768px) {
   .calculator {
-    width: 32vw;
+    width: 50vw;
   }
   .calculator__grid {
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: left;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 12px;
+    padding-top: 20px;
+    width: 40vw;
+  }
+  button {
+    padding: 15px 15px;
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 1000px) {
   .calculator {
-    width: 25vw;
+    width: 50vw;
   }
   .calculator__grid {
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: left;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 15px;
+    padding-top: 20px;
+    width: 45vw;
+  }
+  .calculator button {
+    padding: 20px 20px;
+    font-size: 35px;
   }
 }/*# sourceMappingURL=main.css.map */
