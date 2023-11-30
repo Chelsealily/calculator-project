@@ -14,6 +14,7 @@ if (!clearButton || !equalsButton || !display) {
 let firstInput = " ";
 let secondInput = " ";
 let operator = "";
+let opScreen = "";
 
 // handle number buttons click
 
@@ -53,9 +54,10 @@ clearButton.addEventListener("click", handleAcClick);
 // handle operation button clicks
 
 const handleOperationClick = (event: Event) => {
-      // YOU WILL NEED TO DO SOMETHING HERE TO REMOVE THE RED SQUIGGLY ;)
-  operator = event.target.innerText;
+  const operatorHTML = event.target as HTMLButtonElement;
+  operator = operatorHTML.innerText;
   display.innerText = operator;
+  
 };
 
 operatorButtons.forEach(button => {
@@ -89,8 +91,8 @@ const handleEqualsClick = () => {
         
     display.innerText = String(result!);
     firstInput = String(result!);
-    secondInput = " ";
-    operator = " ";  
+    secondInput = "";
+    operator = "0";  
 
 
 // Easter Egg
@@ -105,9 +107,5 @@ const handleEqualsClick = () => {
   };
 
 equalsButton.addEventListener("click", handleEqualsClick);
-
-// handle 0 (limit it to 1 use)
-
-// handle = to 1 use limit
 
    
